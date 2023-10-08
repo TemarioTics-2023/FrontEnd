@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CapuPlates</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<div id="particles-js"></div>
+
+</head>
+<body>
+
+	<style>
+        .gif-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        #animated-gif {
+            width: 200px; /* Ajusta el ancho según tu GIF */
+            height: auto; /* Mantén la proporción original */
+            opacity: 0; /* Establece la opacidad inicial en 0 para ocultar el GIF */
+            transition: opacity 0.5s; /* Agrega una transición suave de opacidad */
+        }
+
+        #static-image {
+            width: 200px; /* Ajusta el ancho según tu imagen estática */
+            height: auto; /* Mantén la proporción original */
+        }
+
+		/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?&family=Kanit:wght@600&family=Lexend:wght@300&family=Share+Tech&display=swap');
+@import url('https://fonts.cdnfonts.com/css/century-gothic-paneuropean');
+@font-face {
+        font-family: MiFuente; /* Puedes elegir el nombre que quieras para tu fuente */
+        src: url('AboveDemoRegular-lJMd.ttf') format('truetype');
+    }
+
+@import url('https://fonts.cdnfonts.com/css/origin-tech-demo');
+
+h1, h3 p, pre, label{
+    background-color: transparent;
+    font-family: 'Lexend', sans-serif;
+}
+
+h2 {
+    font-family: 'MiFuente', sans-serif;
+    background-color: transparent;
+}
+.img{margin-left:1000px;
+margin-top: 10px; background-color:     transparent ;
+}
+
+/*Animated Background*/
+
+body {
+  overflow-x: hidden;
+  background-color: #0F132E;
+  overflow-y: auto;
+}
+
+
+#particles-js {
+    height: 100vh; 
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+
+/*Left Menu*/
+
+.vertical-line {
+    position: fixed;
+    top: 10%;
+    bottom: 0;
+    left: 15%;
+    border-left: 1px solid white;
+    height: 555px;
+    margin-left: -1px;
+}
+
+:root {
+  --base: #FFFF;
+  --accent: #89023E;
+  --shadow: #536D88;
+}
+
+.cool {
+  font: bold 3rem/1.2 sans-serif;
+  max-width: 20rem;
+  margin-left: 260px;
+  margin-top: 80px;
+}
+.cool span {
+  color: var(--shadow);
+  display: inline-block;
+  position: relative;
+}
+.cool span:nth-child(1)::before, .cool span:nth-child(1)::after {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.cool span:nth-child(2)::before, .cool span:nth-child(2)::after {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.cool span:nth-child(3)::before, .cool span:nth-child(3)::after {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.cool span:nth-child(4)::before, .cool span:nth-child(4)::after {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.cool span:nth-child(5)::before, .cool span:nth-child(5)::after {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.cool span:nth-child(6)::before, .cool span:nth-child(6)::after {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.cool span:nth-child(7)::before, .cool span:nth-child(7)::after {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.cool span:nth-child(8)::before, .cool span:nth-child(8)::after {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.cool span:nth-child(9)::before, .cool span:nth-child(9)::after {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.cool span:nth-child(10)::before, .cool span:nth-child(10)::after {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+@media (prefers-reduced-motion) {
+  .cool span {
+    color: var(--base);
+  }
+}
+.cool span::before {
+  -webkit-animation: max-height 0.4s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+          animation: max-height 0.4s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+  color: var(--accent);
+}
+.cool span::after {
+  -webkit-animation: max-width 0.7s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+          animation: max-width 0.7s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+  color: var(--base);
+}
+.cool span::before, .cool span::after {
+  content: attr(data-text);
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  speak: none;
+}
+@media (prefers-reduced-motion) {
+  .cool span::before, .cool span::after {
+    -webkit-animation: none;
+            animation: none;
+    content: "";
+  }
+}
+
+.cuadro {
+
+width: 180px;
+
+height: 50px;
+
+background-color: #4CAF50;
+
+color: white;
+
+text-align: center;
+
+line-height: 25px;
+
+margin: 20px;
+
+position: fixed;
+
+bottom: 0;
+
+left: 0;
+
+vertical-align: middle;
+
+font-size: 10px;
+
+}
+
+.capu-container {
+        position: fixed;
+        top: 545px;
+        left: 35px;
+        max-width: 200px;
+        height: 205;
+    }
+
+Style .formulario button {
+
+    background-color: #3498db;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    }
+
+    .formulario button:hover {
+
+    background-color: #2980b9;
+
+    transform: scale(1.05); /* Escala ligeramente al pasar el ratón sobre el botón */
+
+    }
+
+    .formulario {
+
+    position: relative; /* Ajustamos la posición para que el cuadro no lo oculte */
+
+    z-index: 2; /* Asegura que el formulario esté en la parte superior */
+
+    margin-top: -50px;
+
+    padding-left: 0px;
+
+    }
+
+    .skin-tone-box {
+
+    position: absolute;
+
+    top: 73%;
+
+    left: 62%;
+
+    width: 33%;
+
+    height: 35%;
+
+    background-color: #536D88; /* Color piel */
+
+    z-index: -1;
+
+    border-radius: 15px;
+
+    }
+
+
+	@-webkit-keyframes max-width {
+	from {
+		max-width: 0;
+	}
+	to {
+		max-width: 100%;
+	}
+	}
+
+	@keyframes max-width {
+	from {
+		max-width: 0;
+	}
+	to {
+		max-width: 100%;
+	}
+	}
+	@-webkit-keyframes max-height {
+	from {
+		max-height: 0;
+	}
+	to {
+		max-height: 100%;
+	}
+	}
+	@keyframes max-height {
+	from {
+		max-height: 0;
+	}
+	to {
+		max-height: 100%;
+	}
+
+	}
+	.video-container {
+			position: fixed;
+			top: 20px;
+			left: 13px;
+			width: 200px;
+			height: 215px;
+			overflow: hidden;
+			cursor: pointer;
+			z-index: 9999;
+		}
+
+		.video-container video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			pointer-events: none; /* Evita que el video interfiera con eventos del ratón */
+		}
+		.video-container:not(:hover) video {
+			animation-play-state: paused;
+		}
+
+
+	#Animaciones de texto
+
+	.animate__animated.animate__fadeInRight {
+			--animate-duration: 1s;
+	}
+	.formulario button {
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .formulario button:hover {
+        background-color: #2980b9;
+        transform: scale(1.05); /* Escala ligeramente al pasar el ratón sobre el botón */
+    }
+    </style>
+
+    <div class="video-container" onmouseover="playGif()" onmouseout="pauseGif()" style="background-color: transparent; overflow: hidden;">
+        <div id="background-gif" style="width: 100%; height: 100%; background-image: url('Logo PNG.png'); background-size: cover;"></div>
+    </div>
+	<div class="cool">
+		<span data-text="CapuPlates" style="left: 20px;">CapuPlates</span>
+	</div>
+	<div class="img">
+		<img src="https://media4.giphy.com/media/GRSV1iZTlHAmOzSNd0/giphy.gif" height="400" style="position: relative; bottom: 180px; right: 35px;">
+	</div>
+
+	<br><br><br><br><br><br><br>
+
+	<div>
+		<h2 class="animate__animated animate__fadeIn" style="color: white; position: relative; left: 1105px; top: -380px;">¿Qué es?</h2>
+		<div class="finalidad animate__animated animate__slideInRight">
+			<pre style="color: white; position: relative; left: 740px; top: -380px; text-align: justify;">
+				Sistema creado por medio de tecnología OCR, el cual está vinculado a una base de 
+				datos. Este sistema creado servirá para facilitar el ingreso de los padres de familia 
+				al momento que vengan a traer a su hijo, donde la tecnología OCR reconocerá su
+				matricula y se le notificará por vía whatssapp al alumno.</pre>
+		</div>
+	</div>
+	<div>
+		<h2 class="animate__animated animate__fadeIn" style="color: white; position: relative; left: 465px; bottom: 300px;">Fin en mente</h2>
+		<div class="finalidad animate__animated animate__slideInRight">
+			<pre style="color: white; position: relative; left: 150px; bottom: 300px;">
+				Automatizar la salida de los alumnos del Colegio Capouilliez, mediante la 
+				tecnología OCR. Beneficiando a los padres de familia, encargados y vecinos.		
+			</pre>
+		</div>
+	</div>
+
+	<div class="vertical-line"></div>
+
+	<script src="particles.min.js"></script>
+	<script>
+		particlesJS("particles-js", 
+		{
+			"particles": {
+			"number": {
+				"value": 30,
+				"density": {
+				"enable": true,
+				"value_area": 800
+				}
+			},
+			"color": {
+				"value": "#ffffff"
+			},
+			"shape": {
+				"type": "circle",
+				"stroke": {
+				"width": 0,
+				"color": "#000000"
+				},
+				"polygon": {
+				"nb_sides": 5
+				},
+				"image": {
+				"src": "img/github.svg",
+				"width": 100,
+				"height": 100
+				}
+			},
+			"opacity": {
+				"value": 0.5,
+				"random": false,
+				"anim": {
+				"enable": false,
+				"speed": 1,
+				"opacity_min": 0.1,
+				"sync": false
+				}
+			},
+			"size": {
+				"value": 3,
+				"random": true,
+				"anim": {
+				"enable": false,
+				"speed": 40,
+				"size_min": 0.1,
+				"sync": false
+				}
+			},
+			"line_linked": {
+				"enable": true,
+				"distance": 150,
+				"color": "#ffffff",
+				"opacity": 0.4,
+				"width": 1
+			},
+			"move": {
+				"enable": true,
+				"speed": 6,
+				"direction": "none",
+				"random": false,
+				"straight": false,
+				"out_mode": "out",
+				"bounce": false,
+				"attract": {
+				"enable": false,
+				"rotateX": 600,
+				"rotateY": 1200
+				}
+			}
+			},
+			"interactivity": {
+			"detect_on": "canvas",
+			"events": {
+				"onhover": {
+				"enable": false,
+				"mode": "repulse"
+				},
+				"onclick": {
+				"enable": false,
+				"mode": "push"
+				},
+				"resize": true
+			},
+			"modes": {
+				"grab": {
+				"distance": 400,
+				"line_linked": {
+					"opacity": 1
+				}
+				},
+				"bubble": {
+				"distance": 400,
+				"size": 40,
+				"duration": 2,
+				"opacity": 8,
+				"speed": 3
+				},
+				"repulse": {
+				"distance": 200,
+				"duration": 0.4
+				},
+				"push": {
+				"particles_nb": 4
+				},
+				"remove": {
+				"particles_nb": 2
+				}
+			}
+			},
+			"retina_detect": false
+		}
+	);
+	</script>
+	</div>
+
+	<div class="skin-tone-box"></div>
+            <div class="formulario" style="margin-top: -360px; margin-left: 320px; position: relative; left: 660px; bottom: 70px;">
+                <div class="animate__animated animate__slideInDown" "col" align="left" > 
+                <h2  style="color: white;">Formulario de registro</h2>
+                <form action="procesar_formulario.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="Nombre" style="color: white;">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="grado" style="color: white;">Grado:</label>
+                        <input type="text" id="grado" name="grado" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="Numero de Placa" style="color: white;">Numero de Placa:</label>
+                        <input type="text" id="Placa" name="Placa" required>
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;">
+                        <label for="imagen_usuario" style="color: white;">Imagen de Usuario:</label>
+                        <input type="file" id="imagen_usuario" name="imagen_usuario" accept="image/*" required>
+                </form>
+                </div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </div>
+		
+
+	<div class="cuadro" style="bottom: 390px; background-color: #19274E;">
+
+		<a href=.\Capuplates.html>
+
+		<h2 style="color: white;">CapuPlates</h2>
+
+		</a>
+
+		</div>
+
+		<div class="cuadro" style="bottom: 325px; background-color: #89023E;">
+
+		<a href=./CapuFinder.html>
+
+		<h2 style="color: white;">CapuFinder</h2>
+
+		</a>
+
+		</div>
+
+		<div class="cuadro" style="bottom: 260px; background-color: #B49B85;">
+
+		<a href=./Rita.html>
+
+		<h2 style="color: white;">RITA</h2>
+
+		</a>
+
+		</div>
+
+		<div class="cuadro" style="bottom: 190px; background-color: #89023E;">
+
+		<a href=.\CapuAttendanceFinal.html>
+
+		<h2 style="color: white;">CapuAttendance</h2>
+
+		</a>
+
+		</div>
+
+		<div class="cuadro" style="bottom: 120px; background-color: #19274E;">
+
+		<a href=./CapuBotFinal.html>
+
+		<h2 style="color: white;">CapuBot</h2>
+
+		</a>
+
+	</div>
+	<div class="capu-container">
+        <img src="LogoCapu.png" style="position: relative; top: 40px; max-width: 150px;">
+    </div>
+	<div class="video" style="text-align: center; margin-top: -640px; margin-left: 260px;">
+		<div style="position:absolute;width:fit-content;height:fit-content; margin: auto;">
+			<div style="position:relative;width:fit-content;height:fit-content; margin: auto;">
+				<!-- Reemplaza la siguiente URL con el enlace de Google Drive del video del proyecto -->
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/U8HFYADikWc?si=ebi_IEWIHvEyxCFg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+
+	<script> 
+	    var gifContainer = document.getElementById("background-gif");
+	    var isPlaying = false;
+
+	    function playGif() {
+	        if (!isPlaying) {
+	            gifContainer.style.backgroundImage = "url('Logo temario sin cuadro.gif')";
+	            isPlaying = true;
+	        }
+	    }
+
+	    function pauseGif() {
+	        if (isPlaying) {
+	            gifContainer.style.backgroundImage = "url('Logo PNG.png')";
+	            isPlaying = false;
+	        }
+	    }
+	</script>
+</body>
+</html>

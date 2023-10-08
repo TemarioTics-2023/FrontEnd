@@ -1,0 +1,298 @@
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?&family=Kanit:wght@600&family=Lexend:wght@300&family=Share+Tech&display=swap');
+@import url('https://fonts.cdnfonts.com/css/century-gothic-paneuropean');
+@font-face {
+        font-family: MiFuente; /* Puedes elegir el nombre que quieras para tu fuente */
+        src: url('AboveDemoRegular-lJMd.ttf') format('truetype');
+    }
+
+@import url('https://fonts.cdnfonts.com/css/origin-tech-demo');
+
+h1, h3 p, pre{
+    background-color: transparent;
+    font-family: 'Lexend', sans-serif;
+}
+
+h2 {
+    font-family: 'MiFuente', sans-serif;
+    background-color: transparent;
+}
+.img{margin-left:1000px;
+margin-top: 10px; background-color:     transparent ;
+}
+
+/*Animated Background*/
+
+body {
+  overflow-x: hidden;
+  background-color: #0F132E;
+  overflow-y: auto;
+}
+
+
+#particles-js {
+    height: 100vh; 
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+  }
+
+/*Left Menu*/
+
+.vertical-line {
+    position: fixed;
+    top: 10%;
+    bottom: 0;
+    left: 15%;
+    border-left: 1px solid white;
+    height: 555px;
+    margin-left: -1px;
+}
+
+:root {
+  --base: #FFFF;
+  --accent: #89023E;
+  --shadow: #536D88;
+}
+
+.cool {
+  font: bold 3rem/1.2 sans-serif;
+  max-width: 20rem;
+  margin-left: 242px;
+  margin-top: 80px;
+}
+.cool span {
+  color: var(--shadow);
+  display: inline-block;
+  position: relative;
+}
+.cool span:nth-child(1)::before, .cool span:nth-child(1)::after {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.cool span:nth-child(2)::before, .cool span:nth-child(2)::after {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.cool span:nth-child(3)::before, .cool span:nth-child(3)::after {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.cool span:nth-child(4)::before, .cool span:nth-child(4)::after {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.cool span:nth-child(5)::before, .cool span:nth-child(5)::after {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+.cool span:nth-child(6)::before, .cool span:nth-child(6)::after {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.cool span:nth-child(7)::before, .cool span:nth-child(7)::after {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+.cool span:nth-child(8)::before, .cool span:nth-child(8)::after {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.cool span:nth-child(9)::before, .cool span:nth-child(9)::after {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+.cool span:nth-child(10)::before, .cool span:nth-child(10)::after {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+@media (prefers-reduced-motion) {
+  .cool span {
+    color: var(--base);
+  }
+}
+.cool span::before {
+  -webkit-animation: max-height 0.4s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+          animation: max-height 0.4s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+  color: var(--accent);
+}
+.cool span::after {
+  -webkit-animation: max-width 0.7s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+          animation: max-width 0.7s cubic-bezier(0.61, 1, 0.88, 1) 1 normal both;
+  color: var(--base);
+}
+.cool span::before, .cool span::after {
+  content: attr(data-text);
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  speak: none;
+}
+@media (prefers-reduced-motion) {
+  .cool span::before, .cool span::after {
+    -webkit-animation: none;
+            animation: none;
+    content: "";
+  }
+}
+
+.cuadro {
+
+width: 180px;
+
+height: 50px;
+
+background-color: #4CAF50;
+
+color: white;
+
+text-align: center;
+
+line-height: 25px;
+
+margin: 20px;
+
+position: fixed;
+
+bottom: 0;
+
+left: 0;
+
+vertical-align: middle;
+
+font-size: 10px;
+
+}
+
+.capu-container {
+        position: fixed;
+        top: 545px;
+        left: 35px;
+        max-width: 200px;
+        height: 205;
+    }
+
+Style .formulario button {
+
+    background-color: #3498db;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    }
+
+    .formulario button:hover {
+
+    background-color: #2980b9;
+
+    transform: scale(1.05); /* Escala ligeramente al pasar el ratón sobre el botón */
+
+    }
+
+    .formulario {
+
+    position: relative; /* Ajustamos la posición para que el cuadro no lo oculte */
+
+    z-index: 2; /* Asegura que el formulario esté en la parte superior */
+
+    margin-top: -50px;
+
+    padding-left: 0px;
+
+    }
+
+    .skin-tone-box {
+
+    position: absolute;
+
+    top: 80%;
+
+    left: 62%;
+
+    width: 33%;
+
+    height: 35%;
+
+    background-color: #536D88; /* Color piel */
+
+    z-index: -1;
+
+    border-radius: 15px;
+
+    }
+
+
+@-webkit-keyframes max-width {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes max-width {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+@-webkit-keyframes max-height {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100%;
+  }
+}
+@keyframes max-height {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100%;
+  }
+
+}
+.video-container {
+        position: fixed;
+        top: 20px;
+        left: 13px;
+        width: 200px;
+        height: 215px;
+        overflow: hidden;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none; /* Evita que el video interfiera con eventos del ratón */
+    }
+    .video-container:not(:hover) video {
+        animation-play-state: paused;
+    }
+
+
+#Animaciones de texto
+
+.animate__animated.animate__fadeInRight {
+        --animate-duration: 1s;
+
+
+
+
